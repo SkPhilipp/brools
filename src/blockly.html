@@ -5,6 +5,7 @@
     <script type="text/javascript" src="js/lib/blockly-blockly_compressed.js"></script>
     <script type="text/javascript" src="js/lib/blockly-blocks_compressed.js"></script>
     <script type="text/javascript" src="js/lib/blockly-en.js"></script>
+    <script type="text/javascript" src="js/blockly/brools-blocks.js"></script>
     <style>
 
       html, body {
@@ -19,26 +20,6 @@
     <script>
 
       function init() {
-
-        Blockly.Blocks['sample'] = {
-          init: function () {
-            this.setHelpUrl('http://www.example.com/');
-            this.setColour(210);
-            this.appendDummyInput()
-                    .appendField("Sometext");
-            this.appendValueInput("somevalue")
-                    .setCheck("Number");
-            this.appendStatementInput("Somestatement")
-                    .setCheck("Boolean")
-                    .appendField(new Blockly.FieldDropdown([
-                      ["someoptionvalue", "someoptionvalueidentifier"]
-                    ]), "someoption");
-            this.setInputsInline(true);
-            this.setPreviousStatement(true, "null");
-            this.setNextStatement(true, "null");
-            this.setTooltip('');
-          }
-        };
 
         Blockly.inject(document.body, {
           path: '../../',
