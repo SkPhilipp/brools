@@ -10,7 +10,7 @@ The idea is that eventually you can build complex business rules with a graphica
 running
 -------
 
-This project is completely clientsize, so to run just put the sources under a port over http
+This project is completely clientside, so to run just put the sources under a port over http
 
     cd src
     python -m SimpleHTTPServer
