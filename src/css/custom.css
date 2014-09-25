@@ -1,0 +1,11 @@
+[ng-click], [data-ng-click] {
+    cursor: pointer;
+}
+
+.page-header a {
+    color: black !important;
+}
+
+.row {
+    padding-bottom: 30px;
+}
