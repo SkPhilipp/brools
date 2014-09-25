@@ -15,23 +15,45 @@
         height: 100%;
       }
 
-      .blocklySvg {
-        height: 100%;
-        width: 100%;
-      }
-
     </style>
     <script>
+
       function init() {
-        Blockly.inject(document.body,
-                {path: '../../', toolbox: document.getElementById('toolbox')});
-        // Let the top-level application know that Blockly is ready.
+
+        Blockly.Blocks['sample'] = {
+          init: function () {
+            this.setHelpUrl('http://www.example.com/');
+            this.setColour(210);
+            this.appendDummyInput()
+                    .appendField("Sometext");
+            this.appendValueInput("somevalue")
+                    .setCheck("Number");
+            this.appendStatementInput("Somestatement")
+                    .setCheck("Boolean")
+                    .appendField(new Blockly.FieldDropdown([
+                      ["someoptionvalue", "someoptionvalueidentifier"]
+                    ]), "someoption");
+            this.setInputsInline(true);
+            this.setPreviousStatement(true, "null");
+            this.setNextStatement(true, "null");
+            this.setTooltip('');
+          }
+        };
+
+        Blockly.inject(document.body, {
+          path: '../../',
+          toolbox: document.getElementById('toolbox')
+        });
+
         window.parent.blocklyLoaded(Blockly);
+
       }
+
     </script>
   </head>
   <body onload="init()">
     <xml id="toolbox" style="display: none;">
+      <block type="sample"></block>
       <block type="controls_if"></block>
       <block type="logic_compare"></block>
       <block type="controls_repeat_ext"></block>
