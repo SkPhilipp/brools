@@ -1,6 +1,8 @@
 Brools
 ======
 
+_This project is no longer maintained and part of my source code "attic". Feel free to use it though, works fine._
+
 Rules for everyone.
 
 The idea is that eventually you can build complex business rules with a graphical layer based on Blockly around it.
